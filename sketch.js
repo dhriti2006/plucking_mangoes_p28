@@ -75,6 +75,15 @@ function draw() {
   mango7.display()
   stone.display()
   launcher.display()
+	
+  collision(stone,mango1);
+  collision(stone,mango2);
+  collision(stone,mango3);
+  collision(stone,mango4);
+  collision(stone,mango5);
+  collision(stone,mango6);
+  collision(stone,mango7);
+
  
 }
 
@@ -84,7 +93,7 @@ function mouseDragged(){
 
 
 function mouseReleased(){
-   Matter.Body.applyForce(stone.body,stone.body.position,{x:40,y:-80})
+   Matter.Body.applyForce(stone.body,stone.body.position,{x:40,y:-60})
     launcher.fly();
 }
 
